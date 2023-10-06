@@ -1,0 +1,528 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../multi-step-form-main/assets/fonts/Ubuntu-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../multi-step-form-main/assets/fonts/Ubuntu-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../multi-step-form-main/assets/fonts/Ubuntu-Regular.ttf);
+  font-weight: 400;
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  background: hsl(229, 24%, 87%);
+  font-family: "Ubuntu", sans-serif;
+}
+body .form-body {
+  width: 55%;
+  background: hsl(231, 100%, 99%);
+  padding: 12px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 80px;
+}
+
+.progress-body {
+  position: relative;
+}
+.progress-body .progress {
+  position: absolute;
+  height: 300px;
+  width: 200px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-70%);
+          transform: translate(-70%);
+}
+.progress-body .progress .steps {
+  margin: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: hsl(229, 24%, 87%);
+  gap: 10px;
+}
+.progress-body .progress .steps .num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.progress-body .progress .steps .num:hover {
+  background: hsl(217, 100%, 97%);
+  color: #1b1c1e;
+}
+.progress-body .progress .steps .num-active {
+  background: hsl(217, 100%, 97%);
+  color: #1b1c1e;
+}
+.progress-body .progress .steps .step-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.progress-body .progress .steps .step-info small {
+  font-size: 10px;
+  opacity: 0.5;
+}
+.progress-body .progress .steps .step-info p {
+  font-weight: 700;
+  font-size: 12px;
+  padding-top: 2px;
+}
+
+.form-input {
+  display: none;
+}
+.form-input h1 {
+  padding: 30px 0 5px 0;
+}
+.form-input small {
+  opacity: 0.5;
+}
+.form-input .input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 15px;
+}
+.form-input .input-group label {
+  padding: 5px 0;
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+  font-size: 16px;
+}
+.form-input .input-group input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid hsl(229, 24%, 87%);
+}
+.form-input .input-group input::-webkit-input-placeholder {
+  font-weight: 400;
+  opacity: 0.5;
+}
+.form-input .input-group input::-moz-placeholder {
+  font-weight: 400;
+  opacity: 0.5;
+}
+.form-input .input-group input:-ms-input-placeholder {
+  font-weight: 400;
+  opacity: 0.5;
+}
+.form-input .input-group input::-ms-input-placeholder {
+  font-weight: 400;
+  opacity: 0.5;
+}
+.form-input .input-group input::placeholder {
+  font-weight: 400;
+  opacity: 0.5;
+}
+.form-input .input-group input:focus {
+  outline: 0;
+}
+.form-input .first-group {
+  margin-top: 30px;
+}
+.form-input .select-btn {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 240px;
+  width: 120%;
+}
+.form-input .button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.form-input .button-group button {
+  background: hsl(213, 96%, 18%);
+  color: hsl(0, 0%, 100%);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 85px;
+}
+.form-input .button-group .prev {
+  background: transparent;
+  color: hsl(229, 24%, 87%);
+  font-weight: 700;
+}
+.form-input .button-group .prev:hover {
+  color: hsl(213, 96%, 18%);
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+.form-input .button-group .next:hover {
+  background: hsl(243, 100%, 62%);
+}
+.form-input .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 220px;
+}
+.form-input .btn button {
+  background: hsl(213, 96%, 18%);
+  color: hsl(0, 0%, 100%);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 85px;
+}
+.form-input .toggle {
+  width: 120%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  background: hsl(217, 100%, 97%);
+  border-radius: 200px;
+  height: 30px;
+  margin-top: 30px;
+}
+.form-input .toggle-bar .toggle-on,
+.form-input .toggle-bar .toggle-off {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  cursor: pointer;
+}
+.form-input .toggle-bar .toggle-off {
+  display: none;
+}
+.form-input .toggle-bar .toggle-active {
+  display: block;
+}
+
+.active {
+  display: block;
+}
+
+.subscription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+  width: 120%;
+  margin-top: 40px;
+  color: hsl(213, 96%, 18%);
+}
+.subscription .arcade {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  width: 33.3333333333%;
+  height: 120px;
+  border: 2px solid hsl(229, 24%, 87%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.subscription .arcade img {
+  width: 30%;
+  margin-bottom: 30px;
+}
+.subscription .arcade small {
+  padding: 5px 0 10px 0;
+}
+.subscription .subscription-active {
+  background: hsl(217, 100%, 97%);
+  border: 2px solid hsl(243, 100%, 62%);
+}
+.subscription .yearly {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  width: 33.3333333333%;
+  height: 120px;
+  border: 2px solid hsl(229, 24%, 87%);
+  border-radius: 5px;
+  cursor: pointer;
+  height: 140px;
+}
+
+.yearly-subscription {
+  display: none;
+}
+
+.yearly-subscription-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.online-services {
+  width: 120%;
+  background: transparent;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid hsl(229, 24%, 87%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+.online-services .check {
+  width: 20px;
+  height: 20px;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.online-services .check img {
+  display: none;
+}
+.online-services .check-active {
+  background: hsl(243, 100%, 62%);
+}
+.online-services .check-active img {
+  display: block;
+}
+.online-services .text {
+  margin-left: 20px;
+}
+.online-services .price p {
+  font-size: 14px;
+}
+.online-services .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.online-top {
+  margin-top: 25px;
+}
+
+.online-active {
+  background: hsl(217, 100%, 97%);
+  border-color: hsl(243, 100%, 62%);
+}
+
+.conclude-billing {
+  width: 120%;
+  margin-top: 25px;
+  background: hsl(217, 100%, 97%);
+  padding: 20px;
+  border-radius: 5px;
+}
+.conclude-billing .checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid hsl(229, 24%, 87%);
+  padding-bottom: 20px;
+}
+.conclude-billing .checkout h5 {
+  font-size: 13px;
+}
+.conclude-billing .checkout a {
+  font-size: 12px;
+}
+.conclude-billing .checkout .price {
+  font-size: 13px;
+}
+.conclude-billing .services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.conclude-billing .services .plan {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.conclude-billing .services .plan #online-price {
+  font-size: 13px;
+  font-weight: 400;
+}
+.conclude-billing .services .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.conclude-billing .services .price #larger-price {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.total {
+  width: 120%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.thank-you {
+  position: relative;
+  top: 30%;
+  width: 100%;
+  margin-left: -50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.thank-you img {
+  width: 10%;
+}
+.thank-you h3 {
+  padding: 20px;
+}
+.thank-you p {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 0.6;
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-step Form</title>
+    <link rel="stylesheet" href="css/form.css" />
+  </head>
+  <body>
+    <div class="form-body">
+      <div class="progress-body">
+        <img
+          src="./multi-step-form-main/assets/images/bg-sidebar-desktop.svg"
+          alt=""
+        />
+        <div class="progress">
+          <div class="steps">
+            <span class="num num-active">1</span>
+            <span class="step-info">
+              <small>STEP 1</small>
+              <p>YOUR INFO</p>
+            </span>
+          </div>
+          <div class="steps">
+            <span class="num">2</span>
+            <span class="step-info">
+              <small>STEP 2</small>
+              <p>SELECT PLAN</p>
+            </span>
+          </div>
+          <div class="steps">
+            <span class="num">3</span>
+            <span class="step-info">
+              <small>STEP 3</small>
+              <p>ADD-ONS</p>
+            </span>
+          </div>
+          <div class="steps">
+            <span class="num">4</span>
+            <span class="step-info">
+              <small>STEP 4</small>
+              <p>SUMMARY</p>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="form-input">
+        <h1>Personal info</h1>
+        <small>
+          Please provide your name, email address, and phone number.
+        </small>
+        <!-- input -->
+        <form>
+          <div class="input-group active">
+            <label for="name">Name</label>
+            <input type="text" placeholder="e.g Stephen King" required />
+          </div>
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" placeholder="e.g. stephenking@lorem.co" />
+          </div>
+          <div class="input-group">
+            <label for="phone">Phone Number</label>
+            <input type="phone" placeholder="e.g. +1 234 567 890" required />
+          </div>
+          <div class="button-group btn">
+            <button class="next">Next Step</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- page 2 -->
+      <div class="form-input">
+        <h1> Select your plan</h1>
+        <small>
+            You have the option of monthly or yearly billing.
+        </small>
+        <!-- monthly -->
+        <div class="subscription monthly-subscription">
+            <div class="arcade">
+                <img src="./multi-step-form-main/assets/images/icon-arcade.svg" alt="">
+                <h5>Arcade</h5>
+                <small><i>$9/mo</i></small>
+            </div>
+            <div class="arcade">
+                <img src="./multi-step-form-main/assets/images/icon-advanced.svg" alt="">
+                <h5>Advanced</h5>
+                <small><i>$12/mo</i></small>
+            </div>
+            <div class="arcade">
+                <img src="./multi-step-form-main/assets/images/icon-pro.svg" alt="">
+                <h5>pro</h5>
+                <small><i>$15/mo</i></small>
+            </div>
+        </div>
+
+        <!-- yearly -->
+        <div class="subscription yearly-subscription">
+          <div class="arcade yearly">
+              <img src="./multi-step-form-main/assets/images/icon-arcade.svg" alt="">
+              <h5>Arcade</h5>
+              <small><i>$90/yr</i></small>
+              <h6>2 months free</h6>
+          </div>
+          <div class="arcade yearly">
+              <img src="./multi-step-form-main/assets/images/icon-advanced.svg" alt="">
+              <h5>Advanced</h5>
+              <small><i>$120/yr</i></small>
+              <h6>2 months free</h6>
+          </div>
+          <div class="arcade yearly">
+              <img src="./multi-step-form-main/assets/images/icon-pro.svg" alt="">
+              <h5>pro</h5>
+              <small><i>$150/yr</i></small>
+              <h6>2 months free</h6>
+          </div>
+      </div>
+        <!-- toggle -->
+        <div class="toggle">
+            <span class="monthly">Monthly</span>
+            <span class="monthly toggle-bar">
+              <img class="toggle-on" src="./multi-step-form-main/assets/images/switch (1).png" alt="switch-on">
+              <img class="toggle-off" src="./multi-step-form-main/assets/images/switch (2).png" alt="switch-off">
+            </span>
+            <span class="monthly">Yearly</span>
+          </div>
+        <div class="button-group select-btn">
+            <button class="prev">Go Back</button>
+            <button class="next">Next Step</button>
+          </div>
+      </div>
+
+      <!-- page 3 -->
+      <div class="form-input active">
+        <h1>Pick add-ons</h1>
+        <small>
+            Add-ons help enhance your gaming experience.
+        </small>
+        <!-- services -->
+        <div class="online-services online-top">
+            <div class="wrap">
+              <span class="check ">
+                <img src="./multi-step-form-main/assets/images/icon-checkmark.svg" alt="">
+            </span>
+            <span class="text">
+                <h5>Online Services</h5>
+                <small> Access to multiplayer games</small>
+            </span>
+            </div>
+            <div class="price">
+                <p>+$1/mo</p>
+            </div>
+        </div>
+        <div class="online-services">
+            <div class="wrap">
+              <span class="check">
+                <img src="./multi-step-form-main/assets/images/icon-checkmark.svg" alt="">
+            </span>
+            <span class="text">
+                <h5>Larger Storage</h5>
+                <small>  Extra 1TB of cloud save</small>
+            </span>
+            </div>
+            <div class="price">
+                <p>+$2/mo</p>
+            </div>
+        </div>
+        <div class="online-services">
+            <div class="wrap">
+              <span class="check">
+              </span>
+              <span class="text">
+                  <h5>Customizable Profile</h5>
+                  <small>Custom theme on your profile</small>
+              </span>
+            </div>
+            <div class="price">
+                <p>+$1/mo</p>
+            </div>
+        </div>
+        <div class="button-group select-btn">
+            <button class="prev">Go Back</button>
+            <button class="next">Next Step</button>
+        </div>
+      </div>
+
+      <!-- page 4 -->
+      <div class="form-input">
+        <h1>Finishing up</h1>
+        <small>
+            Double-check everything looks OK before confirming.
+        </small>
+        <!-- input -->
+        <div class="conclude-billing">
+         <div class="checkout">
+             <span class="plan">
+                <h5>Arcade (Monthly)</h5>
+                <a href="#">change</a>
+             </span>
+             <span class="price">
+                $9/mo
+             </span>
+         </div>
+         <div class="services">
+            <span class="plan">
+               <small>Online service</small>
+               <small id="online-price">+$51/mo</small>
+            </span>
+            <span class="price">
+               <small>Larger storage</small>
+               <small id="larger-price">+$52/mo</small>
+            </span>
+          </div>
+        </div>
+            <span class="total">
+                <small>Total (per month)</small>
+                <small>+$12/mo</small>
+            </span>
+        
+          <div class="button-group select-btn">
+            <button class="prev">Go Back</button>
+            <button class="next">Confirm</button>
+          </div>
+      </div>
+
+      <!-- submitted -->
+      <div class="form-input">
+        <div class="thank-you">
+          <img src="./multi-step-form-main/assets/images/icon-thank-you.svg" alt="">
+        <h3>Thank you!</h3>
+        <p> Thanks for confirming your subscription! We hope you have fun 
+            using our platform. If you ever need support, please feel free 
+            to email us at support@loremgaming.com.</p>
+      </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
