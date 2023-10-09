@@ -89,7 +89,7 @@ body .form-body {
   background: hsl(217, 100%, 97%);
   color: #1b1c1e;
 }
-.progress-body .progress .steps .num-active {
+.progress-body .progress .steps .steps-active {
   background: hsl(217, 100%, 97%);
   color: #1b1c1e;
 }
@@ -110,6 +110,14 @@ body .form-body {
   font-weight: 700;
   font-size: 12px;
   padding-top: 2px;
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
 }
 
 .form-input {
@@ -241,6 +249,12 @@ body .form-body {
   height: 30px;
   margin-top: 30px;
 }
+.form-input .toggle .text.dim {
+  opacity: 0.5;
+}
+.form-input .toggle .monthly {
+  font-size: 14px;
+}
 .form-input .toggle-bar .toggle-on,
 .form-input .toggle-bar .toggle-off {
   display: -webkit-box;
@@ -300,6 +314,9 @@ body .form-body {
 .subscription .arcade small {
   padding: 5px 0 10px 0;
 }
+.subscription .arcade h5 {
+  color: hsl(213, 96%, 18%);
+}
 .subscription .subscription-active {
   background: hsl(217, 100%, 97%);
   border: 2px solid hsl(243, 100%, 62%);
@@ -350,6 +367,7 @@ body .form-body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  color: hsl(213, 96%, 18%);
   cursor: pointer;
 }
 .online-services .check {
@@ -381,6 +399,7 @@ body .form-body {
 }
 .online-services .price p {
   font-size: 14px;
+  color: hsl(243, 100%, 62%);
 }
 .online-services .wrap {
   display: -webkit-box;
@@ -426,12 +445,19 @@ body .form-body {
 }
 .conclude-billing .checkout h5 {
   font-size: 13px;
+  color: hsl(213, 96%, 18%);
 }
 .conclude-billing .checkout a {
   font-size: 12px;
 }
 .conclude-billing .checkout .price {
   font-size: 13px;
+  color: hsl(243, 100%, 62%);
+}
+.conclude-billing .checkout .first-price {
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+  opacity: 1;
 }
 .conclude-billing .services {
   display: -webkit-box;
@@ -461,6 +487,9 @@ body .form-body {
 .conclude-billing .services .plan #online-price {
   font-size: 13px;
   font-weight: 400;
+  color: hsl(213, 96%, 18%);
+  font-weight: 600;
+  opacity: 1;
 }
 .conclude-billing .services .price {
   display: -webkit-box;
@@ -477,6 +506,9 @@ body .form-body {
 .conclude-billing .services .price #larger-price {
   font-size: 13px;
   font-weight: 400;
+  color: hsl(213, 96%, 18%);
+  font-weight: 600;
+  opacity: 1;
 }
 
 .total {
@@ -492,6 +524,12 @@ body .form-body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.total .total-price {
+  color: hsl(243, 100%, 62%);
+  font-size: 18px;
+  opacity: 1;
+  font-weight: 700;
 }
 
 .thank-you {

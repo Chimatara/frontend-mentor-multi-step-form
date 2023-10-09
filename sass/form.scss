@@ -74,7 +74,6 @@ body {
   position: relative;
   .progress {
     position: absolute;
-    // background: yellow;
     height: 300px;
     width: 200px;
     top: 0;
@@ -100,7 +99,7 @@ body {
           color: #1b1c1e;
         }
       }
-      .num-active {
+      .steps-active {
         background: $Magnolia;
         color: #1b1c1e;
       }
@@ -119,6 +118,13 @@ body {
       }
     }
   }
+}
+
+.desktop{
+  display: block;
+}
+.mobile{
+  display: none;
 }
 .form-input {
   display: none;
@@ -199,6 +205,12 @@ body {
     border-radius: 200px;
     height: 30px;
     margin-top: 30px;
+    .text.dim {
+      opacity: 0.5; 
+    }
+    .monthly{
+        font-size: 14px;
+    }
   }
   .toggle-bar {
     .toggle-on,
@@ -239,6 +251,9 @@ body {
     small {
       padding: 5px 0 10px 0;
     }
+    h5{
+        color: $marineblue;
+    }
   }
   .subscription-active {
     background: $Magnolia;
@@ -270,6 +285,7 @@ body {
   align-items: center;
   margin: 15px 0;
   justify-content: space-between;
+  color: $marineblue;
   cursor: pointer;
   .check {
     width: 20px;
@@ -295,6 +311,7 @@ body {
   .price {
     p {
       font-size: 14px;
+      color: $purplishBlue;
     }
   }
   .wrap {
@@ -311,7 +328,7 @@ body {
   border-color: $purplishBlue;
 }
 
-//  page 3
+//  page 4
 .conclude-billing {
   width: 120%;
   margin-top: 25px;
@@ -328,12 +345,19 @@ body {
     padding-bottom: 20px;
     h5 {
       font-size: 13px;
+      color: $marineblue;
     }
     a {
       font-size: 12px;
     }
     .price {
       font-size: 13px;
+      color: $purplishBlue;
+    }
+    .first-price{
+        color: $marineblue;
+        font-weight: 700;
+        opacity: 1;
     }
   }
   .services {
@@ -348,6 +372,9 @@ body {
       #online-price {
         font-size: 13px;
         font-weight: 400;
+        color: $marineblue;
+        font-weight: 600;
+        opacity: 1;
       }
     }
     .price {
@@ -357,6 +384,9 @@ body {
       #larger-price {
         font-size: 13px;
         font-weight: 400;
+        color: $marineblue;
+        font-weight: 600;
+        opacity: 1;
       }
     }
   }
@@ -367,6 +397,12 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  .total-price{
+    color: $purplishBlue;
+    font-size: 18px;
+    opacity: 1;
+    font-weight: 700;
+  }
 }
 // Thank you page
 .thank-you {
@@ -392,3 +428,4 @@ body {
     opacity: 0.6;
   }
 }
+

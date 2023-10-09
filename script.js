@@ -2,18 +2,33 @@ const formPages = document.querySelectorAll('.form-input');
 const nextButton = document.querySelectorAll('.next');
 const prevButton = document.querySelectorAll('.prev');
 const progress = document.querySelectorAll('.num')
+const steps = document.querySelectorAll('.steps')
 
 // toggle
 const toggleIconOn = document.querySelector('.toggle-on')
 const toggleIconOff = document.querySelector('.toggle-off')
+const selectedMonthlyToggle = document.querySelectorAll('.monthly-text')
 const monthlySub = document.querySelector('.monthly-subscription')
 const yearlySub = document.querySelector('.yearly-subscription')
 
 // subscription cards
 const subscriptions = document.querySelectorAll('.arcade, .yearly')
 const services = document.querySelectorAll('.online-services');
+const checked = document.querySelectorAll('.check')
+var toggleBar = document.querySelector('.toggle-bar')
 
 
+let currentActive = 0
+
+
+document.addEventListener('DOMContentLoaded', function () {
+ 
+    // toggleBar.addEventListener('click', function () {
+    //     // Toggle the dim class on the monthly text elements
+    //     selectedMonthlyToggle.forEach(function (element) {
+    //       element.classList.toggle('dim');
+    //     });
+    //   });
 
     toggleIconOn.addEventListener('click', () => {
         toggleIconOn.style.display = 'none'
@@ -45,37 +60,47 @@ const services = document.querySelectorAll('.online-services');
     })
    }
 
-   function onlineServices(){
+ 
+function onlineServices() {
     services.forEach(service => {
-       service.addEventListener('click', () => {
-        service.classList.add('online-active')
-        
-       })
-    })
-   }
-  onlineServices()
+        service.addEventListener('click', () => {
+            isChecked(service); // Pass the service element to isChecked
+            service.classList.toggle('online-active');
+        });
+    });
+}
+
+function isChecked(service) {
+    const index = Array.from(services).indexOf(service);
+    checked[index].classList.toggle('check-active');
+}
+
+onlineServices();
+  
+// page ends here
 
 
-
-
-
-let currentActive = 1
-
+// buttons begin here
 nextButton.forEach(button => {
     button.addEventListener('click', () => {
-        currentActive++
-        updatePage()
-        updateSteps()
+        if (currentActive < formPages.length - 1) {
+            currentActive++;
+            updatePage();
+            updateSteps();
+        }
     })
 })
 prevButton.forEach(button => {
     button.addEventListener('click', () => {
-        currentActive--
-        updatePage()
-        updateSteps()
+        if (currentActive > 0) {
+            currentActive--;
+            updatePage();
+            updateSteps();
+        }
     })
 })
 
+// update page begins here
 function updatePage() {
     formPages.forEach(page => {
        if(page.classList.contains('active')){
@@ -86,14 +111,24 @@ function updatePage() {
 }
 
 function updateSteps() {
- progress.forEach((item, index)=> {
-    console.log('clicked')
- })
-   
-}
+ progress.forEach((step, index)=> {
 
-function removeStep(){
-    steps.forEach(step => {
-        step.classList.remove('active')
-    })
+    step.addEventListener('click', () => {
+        currentActive = index;
+        updatePage();
+        updateSteps();
+    });
+    if (index === currentActive) {
+        step.classList.add('steps-active');
+    } else {
+        step.classList.remove('steps-active');
+    }
+    
+ })  
 }
+updateSteps()
+
+
+
+
+});

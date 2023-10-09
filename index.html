@@ -12,10 +12,12 @@
         <img
           src="./multi-step-form-main/assets/images/bg-sidebar-desktop.svg"
           alt=""
+          class="desktop"
         />
+        <img src="./multi-step-form-main/assets/images/bg-sidebar-mobile.svg" alt="" class="mobile">
         <div class="progress">
           <div class="steps">
-            <span class="num num-active">1</span>
+            <span class="num steps-active">1</span>
             <span class="step-info">
               <small>STEP 1</small>
               <p>YOUR INFO</p>
@@ -44,7 +46,8 @@
           </div>
         </div>
       </div>
-      <div class="form-input">
+
+      <div class="form-input active">
         <h1>Personal info</h1>
         <small>
           Please provide your name, email address, and phone number.
@@ -70,7 +73,7 @@
       </div>
 
       <!-- page 2 -->
-      <div class="form-input">
+      <div class="form-input" id="plan_page">
         <h1> Select your plan</h1>
         <small>
             You have the option of monthly or yearly billing.
@@ -117,12 +120,12 @@
       </div>
         <!-- toggle -->
         <div class="toggle">
-            <span class="monthly">Monthly</span>
+            <span class="monthly monthly-text text">Monthly</span>
             <span class="monthly toggle-bar">
               <img class="toggle-on" src="./multi-step-form-main/assets/images/switch (1).png" alt="switch-on">
               <img class="toggle-off" src="./multi-step-form-main/assets/images/switch (2).png" alt="switch-off">
             </span>
-            <span class="monthly">Yearly</span>
+            <span class="monthly monthly-text">Yearly</span>
           </div>
         <div class="button-group select-btn">
             <button class="prev">Go Back</button>
@@ -131,7 +134,7 @@
       </div>
 
       <!-- page 3 -->
-      <div class="form-input active">
+      <div class="form-input">
         <h1>Pick add-ons</h1>
         <small>
             Add-ons help enhance your gaming experience.
@@ -168,6 +171,7 @@
         <div class="online-services">
             <div class="wrap">
               <span class="check">
+                <img src="./multi-step-form-main/assets/images/icon-checkmark.svg" alt="">
               </span>
               <span class="text">
                   <h5>Customizable Profile</h5>
@@ -195,9 +199,9 @@
          <div class="checkout">
              <span class="plan">
                 <h5>Arcade (Monthly)</h5>
-                <a href="#">change</a>
+                <a class="change" href="">change</a>
              </span>
-             <span class="price">
+             <span class="price first-price">
                 $9/mo
              </span>
          </div>
@@ -214,7 +218,7 @@
         </div>
             <span class="total">
                 <small>Total (per month)</small>
-                <small>+$12/mo</small>
+                <small class="total-price">+$12/mo</small>
             </span>
         
           <div class="button-group select-btn">
